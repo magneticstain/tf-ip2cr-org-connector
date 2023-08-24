@@ -1,6 +1,6 @@
-# base-aws-tf-template
+# tf-ip2cr-org-connector
 
-A base template for new AWS-based Terraform plans.
+Terraform plans used to create resources on a child account to support AWS Organizations usage in IP-2-CloudResource.
 
 ## Supported Features
 

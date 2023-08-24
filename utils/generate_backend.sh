@@ -5,7 +5,7 @@
 # Thanks ChatGPT :)
 #
 
-PROJ_NAME="<PROJECT_NAME>" ## !!! UPDATE ME !!!
+PROJ_NAME="ip2cr-org-connector" ## !!! UPDATE ME !!!
 
 # Set your AWS region and profile
 AWS_REGION="us-east-1"
