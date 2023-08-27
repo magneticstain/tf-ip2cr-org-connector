@@ -33,26 +33,35 @@ Take the names of the S3 bucket and DynamoDB table from the backend generator sc
 Example:
 
 ```hcl
-bucket = "tf-bash-aws-tf-template"
+bucket = "tf-ip2cr-org-connector"
 key    = "terraform.tfstate"
 region = "us-east-1"
 
-dynamodb_table = "tf-bash-aws-tf-template"
+dynamodb_table = "tf-ip2cr-org-connector"
 ```
 
 ### Set TF Vars
 
 Generate a `terraform.tfvars` file and fill in the variables as approriate.
 
-TODO: add tf vars file template for your project as needed
-
 Example:
 
 ```hcl
-ami_id = "ami-053b0d53c279acc90"  # Ubuntu Server 22.04 LTS
-key_pair_name = "default"
-subnets = ["subnet-123456789", "subnet-987654321"]
-vpc = "vpc-12345abcde"
+ip2cr_xaccount_name = "ip2cr-xaccount-connector"
+ip2cr_xaccount_assume_role_policy = <<EOF
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "sts:AssumeRole",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            }
+        }
+    ]
+}
+EOF
 ```
 
 ### Plan and Apply Plans
