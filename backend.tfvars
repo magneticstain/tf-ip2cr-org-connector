@@ -1,5 +1,5 @@
-bucket = "tf-ip2cr-org-connector"
+bucket = "tf-ip2cr-org-connector-1693177551"
 key    = "terraform.tfstate"
 region = "us-east-1"
 
-dynamodb_table = "tf-ip2cr-org-connector"
+dynamodb_table = "tf-ip2cr-org-connector-1693177551"
