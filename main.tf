@@ -15,6 +15,8 @@ provider "aws" {
   region  = "us-east-1"
 }
 
-module "modules" {
-    source = "./modules"
+module "ip2cr-org-connector" {
+    source = "./modules/ip2cr-org-connector"
+    ip2cr_xaccount_name = var.ip2cr_xaccount_name
+    ip2cr_xaccount_assume_role_policy = var.ip2cr_xaccount_assume_role_policy
 }
