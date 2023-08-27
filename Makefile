@@ -6,7 +6,7 @@ TF_BACKEND_CONFIG = ./backend.tfvars
 .PHONY: init plan apply destroy
 
 init:
-	rm .terraform/terraform.tfstate
+	rm .terraform/terraform.tfstate || true 
 	terraform init -backend-config=$(TF_BACKEND_CONFIG)
 
 plan:
