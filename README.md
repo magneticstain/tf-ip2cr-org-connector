@@ -18,14 +18,6 @@ The first step is to configure your environment right. First, you should set the
 export AWS_PROFILE=profile-123
 ```
 
-### Reconfigure Backend
-
-If this is a new account, or you're switching over from running this plan on another account, you will also need to reconfigure the terraform backend.
-
-```bash
-terraform init -backend-config=./backend.tfvars -reconfigure
-```
-
 ### Bootstrap the Prerequisite Resources
 
 The plans use S3 as a backend and DynamoDB for state tracking. A script is included to easily generate the resources needed to support this.
@@ -54,6 +46,14 @@ key    = "terraform.tfstate"
 region = "us-east-1"
 
 dynamodb_table = "tf-ip2cr-org-connector"
+```
+
+### Reconfigure Backend
+
+If this is a new account, or you're switching over from running this plan on another account, you will also need to reconfigure the terraform backend.
+
+```bash
+terraform init -backend-config=./backend.tfvars -reconfigure
 ```
 
 ### Set TF Vars
