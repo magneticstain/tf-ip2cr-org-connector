@@ -5,11 +5,7 @@
 # Thanks ChatGPT :)
 #
 
-PROJ_NAME="ip2cr-org-connector" ## !!! UPDATE ME !!!
-
-# Set your AWS region and profile
-AWS_REGION="us-east-1"
-AWS_PROFILE="default"  ## update this if needed
+PROJ_NAME="ip2cr-org-connector-$(date +%s)" ## !!! UPDATE ME !!!
 
 # Set the bucket and table names
 S3_BUCKET_NAME="tf-${PROJ_NAME}"
