@@ -24,6 +24,8 @@ resource "aws_iam_role_policy" "ip2cr-xaccount-role-policy" {
           "cloudfront:ListDistributions",
           "ec2:DescribeInstances",
           "elasticloadbalancing:DescribeLoadBalancers",
+          "elasticloadbalancing:DescribeListeners",
+          "elasticloadbalancing:DescribeTargetHealth",
           "iam:ListAccountAliases"
         ]
         Effect   = "Allow"
