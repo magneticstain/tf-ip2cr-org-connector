@@ -5,7 +5,7 @@
 # Thanks ChatGPT :)
 #
 
-PROJ_NAME="ip2cr-org-connector-509915386432"
+PROJ_NAME="ip2cr-org-connector-138277128026"
 
 # Set the bucket and table names
 S3_BUCKET_NAME="tf-${PROJ_NAME}"
